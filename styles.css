@@ -8,8 +8,6 @@ body {
 .wrapper {
   width: 100%;
   height: 100%;
-  /* padding-left: 25px;
-  padding-right: 25px; */
 }
 
 .twitch-video {
@@ -19,16 +17,9 @@ body {
 
 .polling {
   background-color: mediumpurple;
-  /* margin-top: 25px; */
-  /* margin-bottom: 25px; */
   height: 40%;
   font-size: 0;
 }
-
-/* .twitch-chat {
-  grid-column: 3;
-  grid-row: 2;
-} */
 
 .poll-header {
   font-size: 40px;
@@ -107,8 +98,19 @@ body {
   background-color: #a17cb8;
 }
 
-.mood-container .mood-list .ol {
-  font-size: 100px;
+.mood-list-col-one,
+.mood-list-col-two {
+  display: inline-block;
+  font-size: 40px;
+  list-style: none;
+  width: 45%;
+  padding-top: 5%;
+  padding-left: 5%;
+}
+
+.mood-list-col-one .li,
+.mood-list-col-two .li {
+  width: 30%;
 }
 
 .word-container {
