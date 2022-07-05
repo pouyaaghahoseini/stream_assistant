@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script> 
+  </head>
+
+  <body>
+    
+
+    <!-- Add a placeholder for the Twitch embed -->
+    <div class="wrapper">
+      <div class="box twitch-video" id="twitch-embed"></div>
+      <div class="box polling">
+        <div class="poll-container">
+          <div class="poll-header">Polling</div>
+          <div class="graph-area">
+            <div class="poll-tabs">
+              <a href="#" class="btn" id="bar-graph">Bar</a>
+              <a href="#" class="btn" id="pie-graph">Pie</a>
+            </div>
+            <canvas class="canvas" id="canvas"></canvas>
+            <div class="time-tabs">
+              <a href="#" class="btn" id="time">Start</a>
+              <a href="#" class="btn" id="time">Stop</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mood-container">
+          <div class="poll-header">Mood</div>
+          <div class="mood-list">
+            <ol>faf</ol>
+          </div>
+          
+        </div>
+        <div class="word-container">
+          <div class="poll-header">Topic</div>
+        </div>
+      </div>
+      <!-- <div class="box chat">
+        <iframe src="https://www.twitch.tv/embed/k3soju/chat?parent=127.0.0.1:5500/index.html"
+          height="100%"
+          width="100%">
+        </iframe>
+      </div> -->
+    </div> 
+    <!-- Load the Twitch embed script -->
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+    <script type="text/javascript">
+      var embed = new Twitch.Embed('twitch-embed', {
+      width: '100%',
+      height: '100%',
+      channel: 'meteos',
+      // layout: "video",
+      autoplay: false,
+      parent: ['pouyaaghahoseini.github.io', 'othersite.example.com'],
+    });
+
+    embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+      var player = embed.getPlayer();
+      player.play();
+    });
+    </script>
+    <!-- <script src="script.js"></script> -->
+    <script src="graph.js"></script>
+  </body>
+
+</html>

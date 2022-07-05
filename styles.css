@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  /* padding-left: 25px;
+  padding-right: 25px; */
+}
+
+.twitch-video {
+  /* padding-top: 25px; */
+  height: 60%;
+}
+
+.polling {
+  background-color: mediumpurple;
+  /* margin-top: 25px; */
+  /* margin-bottom: 25px; */
+  height: 40%;
+  font-size: 0;
+}
+
+/* .twitch-chat {
+  grid-column: 3;
+  grid-row: 2;
+} */
+
+.poll-header {
+  font-size: 40px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: #c6b3d0;
+}
+
+.mood-container .poll-header {
+  font-size: 40px;
+  text-decoration: underline;
+  text-align: center;
+  background-color: #a17cb8;
+}
+
+.poll-container {
+  width: 34%;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  background-color: #c6b3d0;
+  font-size: 0;
+}
+
+.poll-tabs,
+.time-tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.poll-tabs .btn,
+.time-tabs .btn {
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  background-color: #6c4a7e;
+  color: #fff;
+  width: 15%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.poll-tabs #bar-graph:hover,
+.poll-tabs #pie-graph:hover {
+  background-color: red;
+}
+
+.time-tabs #time:hover {
+  background-color: red;
+}
+
+.graph-area {
+  width: 70%;
+  height: 70%;
+  /* display: inline-block; */
+  /* overflow: auto; */
+  padding-left: 15%;
+  justify-content: center;
+}
+
+.graph-area .time-tabs {
+  padding-top: 1%;
+}
+
+/* Mood stuff*/
+.mood-container {
+  margin: 0;
+  padding: 0;
+  width: 33%;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  background-color: #a17cb8;
+}
+
+.mood-container .mood-list .ol {
+  font-size: 100px;
+}
+
+.word-container {
+  margin: 0;
+  padding: 0;
+  width: 33%;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  background-color: #c6b3d0;
+}
