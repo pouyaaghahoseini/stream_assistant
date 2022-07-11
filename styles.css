@@ -5,21 +5,19 @@ body {
   display: flex;
 }
 
+/* Overall Interface */
+
+/* This is so it can use whole screen */
 .wrapper {
   width: 100%;
   height: 100%;
 }
 
 .twitch-video {
-  /* padding-top: 25px; */
   height: 60%;
 }
 
-.polling {
-  background-color: mediumpurple;
-  height: 40%;
-  font-size: 0;
-}
+/* Headers for the polling area */
 
 .poll-header {
   font-size: 40px;
@@ -35,6 +33,15 @@ body {
   background-color: #a17cb8;
 }
 
+/* Polling section wrapper */
+.polling {
+  /* background-color: mediumpurple; */
+  height: 40%;
+  font-size: 0;
+}
+
+
+/* Polling section */
 .poll-container {
   width: 34%;
   height: 100%;
@@ -65,20 +72,18 @@ body {
   border: 2px solid black;
 }
 
+/* Button hover */
 .poll-tabs #bar-graph:hover,
-.poll-tabs #pie-graph:hover {
+.poll-tabs #pie-graph:hover 
+.time-tabs #start:hover,
+.time-tabs #stop:hover {
   background-color: red;
 }
 
-.time-tabs #time:hover {
-  background-color: red;
-}
-
+/* Graph css */
 .graph-area {
   width: 70%;
   height: 70%;
-  /* display: inline-block; */
-  /* overflow: auto; */
   padding-left: 15%;
   justify-content: center;
 }
@@ -98,20 +103,19 @@ body {
   background-color: #a17cb8;
 }
 
-.mood-list-col-one,
-.mood-list-col-two {
-  display: inline-block;
+.mood-wrapper{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-gap: 10px;
   font-size: 40px;
-  list-style: none;
-  width: 45%;
-  padding-top: 5%;
+  padding-top: 2%;
+}
+
+.mood-item{
   padding-left: 5%;
 }
 
-.mood-list-col-one .li,
-.mood-list-col-two .li {
-  width: 30%;
-}
+/* topic section */
 
 .word-container {
   margin: 0;

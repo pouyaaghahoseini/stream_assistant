@@ -12,8 +12,8 @@
 
     <!-- Add a placeholder for the Twitch embed -->
     <div class="wrapper">
-      <div class="box twitch-video" id="twitch-embed"></div>
-      <div class="box polling">
+      <div class="twitch-video" id="twitch-embed"></div>
+      <div class="polling">
         <div class="poll-container">
           <div class="poll-header">Polling</div>
           <div class="graph-area">
@@ -25,23 +25,21 @@
             </div>
             <canvas class="canvas" id="canvas"></canvas>
             <div class="time-tabs">
-              <a href="#" class="btn" id="time">Start</a>
-              <a href="#" class="btn" id="time">Stop</a>
+              <a href="#" class="btn" id="start">Start</a>
+              <a href="#" class="btn" id="stop">Stop</a>
             </div>
           </div>
         </div>
 
         <div class="mood-container">
           <div class="poll-header">Mood</div>
-          <div class="mood-list-col-one">
-            <li>1. Pog</li>
-            <li>3. Sadge</li>
-            <li>5. LUL</li>
-          </div>
-          <div class="mood-list-col-two">
-            <li>2. Kappa</li>
-            <li>4. NotLikeThis</li>
-            <li>6. HeyGuys</li>
+          <div class="mood-wrapper">
+            <div class="mood-item one">1. Pog</div>
+            <div class="mood-item two">2. Kappa</div>
+            <div class="mood-item three">3. Sadge</div>
+            <div class="mood-item four">4. Lul</div>
+            <div class="mood-item five">5. NotLikeThis</div>
+            <div class="mood-item six">6. HeyGuys</div>
           </div>
           
         </div>
@@ -74,7 +72,8 @@
     });
     </script>
     <!-- <script src="script.js"></script> -->
-    <script src="graph.js"></script>
+    <script src="/script/graph.js"></script>
+    <script src="/script/chat.js"></script>
   </body>
 
 </html>

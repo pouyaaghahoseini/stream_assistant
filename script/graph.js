@@ -3,7 +3,7 @@
 var graph = true;
 var barBtn = document.getElementById('bar-graph');
 var pieBtn = document.getElementById('pie-graph');
-
+var btn = document.getElementById('start');
 // buttons
 
 barBtn.addEventListener('click', function () {
@@ -14,6 +14,10 @@ barBtn.addEventListener('click', function () {
 pieBtn.addEventListener('click', function () {
   graph = false;
   changeChart(graph);
+});
+
+btn.addEventListener('click', function () {
+  document.querySelector('.one').innerHTML = '1. hello';
 });
 
 // Graph data variables
