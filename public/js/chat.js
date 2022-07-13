@@ -1,7 +1,7 @@
 const tmi = require('tmi.js');
 
 const client = new tmi.Client({
-	channels: [ 'k3soju' ]
+	channels: [ 'sneakylol' ]
 });
 
 client.connect();

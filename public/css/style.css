@@ -1,128 +1,206 @@
 body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-  }
-  
-  /* Overall Interface */
-  
-  /* This is so it can use whole screen */
-  .wrapper {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .twitch-video {
-    height: 60%;
-  }
-  
-  /* Headers for the polling area */
-  
-  .poll-header {
-    font-size: 40px;
-    text-decoration: underline;
-    text-align: center;
-    background-color: #c6b3d0;
-  }
-  
-  .mood-container .poll-header {
-    font-size: 40px;
-    text-decoration: underline;
-    text-align: center;
-    background-color: #a17cb8;
-  }
-  
-  /* Polling section wrapper */
-  .polling {
-    /* background-color: mediumpurple; */
-    height: 40%;
-    font-size: 0;
-  }
-  
-  
-  /* Polling section */
-  .poll-container {
-    width: 34%;
-    height: 100%;
-    display: inline-block;
-    overflow: auto;
-    background-color: #c6b3d0;
-    font-size: 0;
-  }
-  
-  .poll-tabs,
-  .time-tabs {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .poll-tabs .btn,
-  .time-tabs .btn {
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    background-color: #6c4a7e;
-    color: #fff;
-    width: 15%;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: 2px solid black;
-  }
-  
-  /* Button hover */
-  .poll-tabs #bar-graph:hover,
-  .poll-tabs #pie-graph:hover, 
-  .time-tabs #start:hover,
-  .time-tabs #stop:hover {
-    background-color: red;
-  }
-  
-  /* Graph css */
-  .graph-area {
-    width: 70%;
-    height: 70%;
-    padding-left: 15%;
-    justify-content: center;
-  }
-  
-  .graph-area .time-tabs {
-    padding-top: 1%;
-  }
-  
-  /* Mood stuff*/
-  .mood-container {
-    margin: 0;
-    padding: 0;
-    width: 33%;
-    height: 100%;
-    display: inline-block;
-    overflow: auto;
-    background-color: #a17cb8;
-  }
-  
-  .mood-wrapper{
-    display: grid;
-    grid-template-columns: 45% 45%;
-    grid-gap: 10px;
-    font-size: 40px;
-    padding-top: 2%;
-  }
-  
-  .mood-item{
-    padding-left: 5%;
-  }
-  
-  /* topic section */
-  
-  .word-container {
-    margin: 0;
-    padding: 0;
-    width: 33%;
-    height: 100%;
-    display: inline-block;
-    overflow: auto;
-    background-color: #c6b3d0;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+}
+
+/* Overall Interface */
+
+/* This is so it can use whole screen */
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.twitch-video {
+  height: 60%;
+}
+
+/* Headers for the polling area */
+
+.poll-header {
+  font-size: 2vw;
+  text-decoration: underline;
+  text-align: center;
+  background-color: #c6b3d0;
+}
+
+.mood-container .poll-header {
+  font-size: 2vw;
+  text-decoration: underline;
+  text-align: center;
+  background-color: #a17cb8;
+}
+
+/* Polling section wrapper */
+.polling {
+  /* background-color: mediumpurple; */
+  height: 40%;
+  font-size: 0;
+}
+
+
+/* Polling section */
+.poll-container {
+  width: 34%;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  background-color: #c6b3d0;
+  font-size: 0;
+}
+
+.poll-tabs,
+.time-tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.poll-tabs .btn,
+.time-tabs .btn{
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1vw;
+  background-color: #6c4a7e;
+  color: #fff;
+  width: 15%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+/* Button hover */
+.poll-tabs #bar-graph:hover,
+.poll-tabs #pie-graph:hover, 
+.time-tabs #start:hover,
+.time-tabs #stop:hover,
+.enter-btn #enter:hover {
+  background-color: red;
+}
+
+/* Graph css */
+.graph-area {
+  width: 70%;
+  height: 70%;
+  padding-left: 15%;
+  justify-content: center;
+}
+
+.graph-area .time-tabs {
+  padding-top: 1%;
+}
+
+/* Mood stuff*/
+.mood-container {
+  margin: 0;
+  padding: 0;
+  width: 33%;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  background-color: #a17cb8;
+}
+
+/* Deals with the grid in the container*/
+.mood-wrapper{
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 2.5vw;
+  grid-row-gap: 1.5vw;
+  font-size: 2vw;
+  padding-top: 2%;
+}
+
+.mood-item{
+  padding-left: 5%;
+  /* padding-bottom: 5%; */
+}
+
+/* topic section */
+
+.word-container {
+  margin: 0;
+  padding: 0;
+  width: 33%;
+  height: 100%;
+  display: inline-block;
+  overflow: auto;
+  background-color: #c6b3d0;
+}
+
+
+/* landing page */
+
+.landingpage-wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content-box{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  background-color: #999999;
+  border-radius: 25px;
+}
+
+.content-box-title,
+.channel-info,
+.enter-btn{
+  padding-top: 5%;
+}
+
+.content-box-title{
+  font-size: 3vw;
+}
+
+.channel-info{
+  font-size: 2vw;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#input-label{
+  padding-right: 1%;
+}
+
+input[type=text], select {
+  padding: 16px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 25%;
+}
+
+#errorMsg {
+  padding-top: 1%;
+  color: red;
+  font-size: 1vw;
+}
+
+.enter-btn .btn {
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5vw;
+  background-color: rebeccapurple;
+  color: #fff;
+  width: 20%;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid black;
+  padding: 10px;
+}
