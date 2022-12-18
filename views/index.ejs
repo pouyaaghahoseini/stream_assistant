@@ -2,68 +2,135 @@
 <html>
   <head>
 		<meta charset="utf-8">
-    <title>Test</title>
+    <title>Alternative Live-Streams </title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" type="image/jpg" href="../img/twitch.png"/>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script> 
   </head>
-
+  <script type="text/javascript">
+    window.addEventListener('beforeunload', function (e) {
+        e.preventDefault();
+        e.returnValue = 'Are you Sure?';
+    });
+    </script>
   <body>
-    
-
-    <!-- Add a placeholder for the Twitch embed -->
     <div class="wrapper">
       <div class="twitch-video" id="twitch-embed"></div>
       <div class="polling">
+        <!-- <div class="ch-header">Channel: <%= name %></div> -->
         <div class="poll-container">
-          <div class="poll-header">Polling</div>
+          <!-- <div class="poll-header">Polling</div> -->
           <div class="graph-area">
-            <div class="poll-tabs">
-              <!-- <button onclick="chartType('bar')">Bar Chart</button> -->
-              <!-- <button onclick="chartType('bar')">Bar Chart</button> -->
-              <a href="#" class="btn" id="bar-graph">Bar</a>
-              <a href="#" class="btn" id="pie-graph">Pie</a>
-            </div>
             <canvas class="canvas" id="canvas"></canvas>
-            <div class="time-tabs">
-              <a href="#" class="btn" id="start">Start</a>
-              <a href="#" class="btn" id="stop">Stop</a>
-            </div>
           </div>
-        </div>
-
-        <div class="mood-container">
-          <div class="poll-header">Mood</div>
-          <div class="mood-wrapper">
-            <div class="mood-item one">1. Pog</div>
-            <div class="mood-item two">2. Kappa</div>
-            <div class="mood-item three">3. Sadge</div>
-            <div class="mood-item four">4. Lul</div>
-            <div class="mood-item five">5. NotLikeThis</div>
-            <div class="mood-item six">6. HeyGuys</div>
+          <div class="poll-input"> 
+            <div class="form__group field">
+              <input type="input" class="form__field" placeholder="Add Poll Option" name="name" id='poll-option' required />
+            </div>
+            <button id="button-add" class="button-add" role="button">Add</button>
+            <button id="button-reset" class="button-reset" role="button">Clear Options</button>
           </div>
           
         </div>
+
+        
         <div class="word-container">
-          <div class="poll-header">Topic</div>
+          <!-- <div class="poll-header">Topic</div> -->
+          <section class="word-box"> 
+          </section>
         </div>
+        <div class="mood-container">
+          <!-- <div class="poll-header">Popular Emotes</div> -->
+          <section class="gallery">
+          </section>
+        </div>
+        <div class="options">
+          <div id="stream-slider-note" class="stream-slider-note">Stream Slider:</div>
+          <div slider id="slider-distance">
+            <div>
+              <div inverse-left id="slider-inverse-left" style="width:50%;"></div>
+              <div inverse-right id="slider-inverse-right" style="width:0%;"></div>
+              <div range id="slider-range"  style="left:50%;right:0%;"></div>
+              <span thumb id="slider-thumb-start" style="left:50%;"></span>
+              <span thumb id="slider-thumb-stop" style="left:100%;"></span>
+              <div sign id="slider-sign-start" class="slider-sign-start" style="left:50%;">
+                <span id="slider-sign-span-start" id="value">-60</span>
+              </div>
+              <div sign id="slider-sign-stop" class="slider-sign-stop" style="left:100%;">
+                <span id="slider-sign-span-stop" id="value">0</span>
+              </div>
+            </div>
+
+            <input id="range1" type="range" tabindex="0" value="-60" max="5" min="-120" oninput="
+            if (this.value > -30) {
+                this.step = 1;
+            } else if (this.value > -60) {
+                this.step = 5;
+            }
+              else{
+                this.step = 10;
+              }
+            this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+            var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+            var children = this.parentNode.childNodes[1].childNodes;
+            children[1].style.width=value+'%';
+            children[5].style.left=value+'%';
+            children[7].style.left=value+'%';children[11].style.left=value+'%';
+            children[11].childNodes[1].innerHTML=this.value;" />
+          
+            <input id="range2" type="range" tabindex="0" value="0" max="0" min="-120" oninput="
+            if (this.value > -30) {
+                this.step = 1;
+            } else if (this.value > -90) {
+                this.step = 5;
+            }
+              else{
+                this.step = 10;
+              }
+            this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+            var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+            var children = this.parentNode.childNodes[1].childNodes;
+            children[3].style.width=(100-value)+'%';
+            children[5].style.right=(100-value)+'%';
+            children[9].style.left=value+'%';children[13].style.left=value+'%';
+            children[13].childNodes[1].innerHTML=this.value;" />
+          </div>
+          <button class="button-1min" id="button-1min" role="button"><span class="text">-1 Min</span></button>
+          <button class="button-5min" id="button-5min" role="button"><span class="text">-5 Min</span></button>
+          <button class="button-10min" id="button-10min" role="button"><span class="text">-10 Min</span></button>
+          <button class="button-15min" id="button-15min" role="button">-20 min</button>
+          <div id="update-speed-note" class="update-speed-note">Update Frequency:</div>
+          <input id = "speed-range" type="range" min="5" max="30" step="5" value="0">
+          <div id="speed-value" class="speed-value">5s</div>
+
+        </div>
+        
       </div>
-      <!-- <div class="box chat">
-        <iframe src="https://www.twitch.tv/embed/k3soju/chat?parent=127.0.0.1:5500/index.html"
-          height="100%"
-          width="100%">
-        </iframe>
-      </div> -->
     </div> 
+    
+    <div id="mydiv" data-test="<%= name %>"></div>
+
+   
+
+    <iframe id="twitch-chat-embed"
+      src="https://www.twitch.tv/embed/<%= name %>/chat?parent=hornbill.cs.umanitoba.ca"
+      height="100%"
+      width="350"
+      allowfullscreen>
+    </iframe>
+
     <!-- Load the Twitch embed script -->
     <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script type="text/javascript">
+     <script type="text/javascript">
+      var chName = document.getElementById('mydiv').dataset.test
+
       var embed = new Twitch.Embed('twitch-embed', {
       width: '100%',
       height: '100%',
-      channel: 'k3soju',
-      // layout: "video",
+      channel: chName,
+      layout: "video",
       autoplay: false,
-      parent: ["hornbill.cs.umanitoba.ca", "www.hornbill.cs.umanitoba.ca", "hornbill.cs.umanitoba.ca/#"],
+      parent: ["hornbill.cs.umanitoba.ca"],
     });
 
     embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
@@ -71,9 +138,15 @@
       player.play();
     });
     </script>
-    <!-- <script src="script.js"></script> -->
-    <script src="../public/js/graph.js"></script>
-    <script src="../public/js/chat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity=
+    "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous">
+</script>
+    <script src="../js/graph.js"></script>
+    <script src="/js/d3.js"></script>
+    <script src="../js/d3.layout.cloud.js"></script>
+    <script src="../js/words.js"></script>
+    <script src="../js/emote.js"></script>
   </body>
-
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta charset="utf-8">
+    <title>Stream Assistant</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" type="image/jpg" href="../img/twitchbw.png"/>
+
+  </head>
+  <body>
+    <div class="landingpage-wrapper">
+      <div class="content-box">
+        <div class="content-box-title"> 
+          Welcome to the Stream Assistant
+        </div>
+          <div class="channel-info">
+            <form action="/login" method="POST">
+              <input type="text" id="chname" name="chname"  placeholder="Channel Name..">
+              <input type="password" id="passwd" name="passwd"  placeholder="Password..">
+              <div class="enter-btn">
+                <button type="submit" class="button-9" role="button" id="loginbutton">Login</button>
+                <!-- <button type="submit" class="btn" id="enter" >Register</button> -->
+              </div>
+            </form>
+          </div>
+          <div id="errorMsg"></div>
+          
+      </div>
+    </div>
+    <script src="../js/login.js"></script>
+  </body>
+</html>
