@@ -29,6 +29,7 @@ Stream Assistant is the result of an effort as part of a master's thesis study. 
 -   **Emote Rankings:** Helps streamers stay connected with their audience's emotions by accessing a ranked presentation of the top 10 most utilized emotes in the chat.
 -   **Sliders:** Enables streamers to fine-tune the insights with time sliders, adjusting report time frames from the past five hours down to the last minute. They can also set the update frequency to match their needs, ranging from every 5 seconds to 30 seconds.
 
+<img width="1440" alt="Screen Shot 2023-02-05 at 6 08 32 PM" src="https://github.com/pouyaaghahoseini/stream_assistant/assets/29574395/a2e0d383-b05a-4172-9432-8ba9f6470372">
 
 ## Contact
 For inquiries and assistance, feel free to reach out via email: [Pouyaaghahoseini@gmail.com](mailto:Pouyaaghahoseini@gmail.com)
