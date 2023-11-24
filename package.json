@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/pouyaaghahoseini/stream_assistant/issues"
   },
-  "homepage": "https://github.com/pouyaaghahoseini/stream_assistant#readme"
+  "homepage": "https://github.com/pouyaaghahoseini/stream_assistant#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
